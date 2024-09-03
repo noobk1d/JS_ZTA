@@ -1,7 +1,9 @@
 const countriesContainer = document.querySelector(".countries");
+const btn = document.querySelector(".btn-country");
 
 //First AJAX call:XMLHttpRequest
 const renderCountry = function (data, className = "") {
+  console.log("render");
   const currency = Object.keys(data.currencies);
   const language = Object.keys(data.languages);
   const html = `<div class="country ${className}">
@@ -21,7 +23,7 @@ const renderCountry = function (data, className = "") {
              </div>
            </div>`;
   countriesContainer.insertAdjacentHTML("beforeend", html);
-  // countriesContainer.style.opacity = 1;
+  countriesContainer.style.opacity = 1;
 };
 
 const renderError = function (msg) {
@@ -138,4 +140,87 @@ const getCountryCommonPromise = function (country) {
     });
 };
 
-getCountryCommonPromise("united kingdom");
+// getCountryCommonPromise("united kingdom");
+
+// navigator.geolocation.getCurrentPosition((pos) => {
+//   console.log(pos),
+//     (err) => {
+//       console.log(err);
+//     };
+// });
+
+const getPosition = function () {
+  return new Promise((resolve, reject) => {
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+// getPosition().then((pos) => {
+//   console.log(pos);
+// });
+
+//Task 1
+
+const whereAmI = function () {
+  getPosition()
+    .then((pos) => {
+      const { latitude, longitude } = pos.coords;
+      // console.log(latitude, longitude);
+      return fetch(`https://geocode.xyz/${latitude},${longitude}?json=1`);
+    })
+    .then((pos) => {
+      if (!pos.ok) throw new Error("Problem with gecoding ${pos.status}");
+      return pos.json();
+    })
+    .then((data) => {
+      console.log(data);
+      const { country } = data;
+      console.log(country);
+
+      return fetch(`https://restcountries.com/v3.1/name/${country}`);
+    })
+    .then((res) => {
+      if (!res.ok) throw new Error("Problem with gecoding ${res.status}");
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      renderCountry(data[0]);
+    })
+    .catch((err) => {
+      console.error(`${err} 💥💥💥`);
+      renderError(`Something went wrong 💥💥 ${err.message}. Try again!`);
+    })
+    .finally(() => {
+      countriesContainer.style.opacity = 1;
+    });
+};
+
+// btn.addEventListener("click", whereAmI());
+
+//Async Await
+// const whereAmI2 = async function (country) {
+//   const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+//   const data = await res.json();
+//   console.log(data);
+//   renderCountry(data[0]);
+// };
+
+const whereAmI2 = async function () {
+  const pos = await getPosition();
+  const { latitude, longitude } = pos.coords;
+
+  const resGeo = await fetch(
+    `https://geocode.xyz/${latitude},${longitude}?json=1`
+  );
+  const geoData = await resGeo.json();
+  const { country } = geoData;
+  // const country = "portugal";
+  const res = await fetch(`https://restcountries.com/v3.1/name/${country}`);
+  const data = await res.json();
+  console.log(data);
+  renderCountry(data[0]);
+};
+
+// btn.addEventListener("click", whereAmI2());
+
