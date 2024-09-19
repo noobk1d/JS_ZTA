@@ -6,28 +6,12 @@ console.log(icons);
 
 const recipeContainer = document.querySelector('.recipe');
 
-const timeout = function (s) {
-  return new Promise(function (_, reject) {
-    setTimeout(function () {
-      reject(new Error(`Request took too long! Timeout after ${s} second`));
-    }, s * 1000);
-  });
-};
+
 
 // https://forkify-api.herokuapp.com/v2
 
 ///////////////////////////////////////
 console.log('TEST');
-
-const renderSpinner = function (parent) {
-  const markup = `<div class="spinner">
-          <svg>
-            <use href="${icons}#icon-loader"></use>
-          </svg>
-        </div>`;
-  parent.innerHTML = '';
-  parent.insertAdjacentHTML('afterbegin', markup);
-};
 
 const controlRecipe = async function () {
   try {
@@ -35,8 +19,9 @@ const controlRecipe = async function () {
     console.log(id);
 
     if (!id) return;
+    console.log(1);
     //Loader
-    renderSpinner(recipeContainer);
+    recipeView.renderSpinner(recipeContainer);
 
     //1 ] Loading the recipe
     await model.loadRecipe(id);

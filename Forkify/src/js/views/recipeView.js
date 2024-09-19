@@ -1,4 +1,6 @@
 import icons from 'url:../../img/icons.svg';
+import Fraction from 'fractional';
+console.log(Fraction);
 
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
@@ -13,6 +15,34 @@ class RecipeView {
 
   #clear() {
     this.#parentElement.innerHTML = '';
+  }
+
+  renderSpinner() {
+    const markup = `<div class="spinner">
+          <svg>
+            <use href="${icons}#icon-loader"></use>
+          </svg>
+        </div>`;
+    // parent.innerHTML = '';
+    this.#clear();
+    this.#parentElement.insertAdjacentHTML('afterbegin', markup);
+  }
+
+  generateMarkupIngredients(ing) {
+    return `<li class="recipe__ingredient">
+              <svg class="recipe__icon">
+                <use href="${icons}#icon-check"></use>
+              </svg>
+              <div class="recipe__quantity">${
+                ing.quantity
+                  ? new Fraction.Fraction(ing.quantity).toString()
+                  : ''
+              }</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">${ing.unit}</span>
+                ${ing.description}
+              </div>
+            </li>`;
   }
 
   generateMarkup() {
@@ -70,21 +100,7 @@ class RecipeView {
         <div class="recipe__ingredients">
           <h2 class="heading--2">Ingredients</h2>
           <ul class="recipe__ingredient-list">
-          ${this.#data.ingredients
-            .map(ing => {
-              return `<li class="recipe__ingredient">
-              <svg class="recipe__icon">
-                <use href="${icons}#icon-check"></use>
-              </svg>
-              <div class="recipe__quantity">${ing.quantity}</div>
-              <div class="recipe__description">
-                <span class="recipe__unit">${ing.unit}</span>
-                ${ing.description}
-              </div>
-            </li>`;
-            })
-            .join('')}
-            
+          ${this.#data.ingredients.map(this.generateMarkupIngredients).join('')}
           </ul>
         </div>
 
