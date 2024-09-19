@@ -5,6 +5,7 @@ console.log(Fraction);
 class RecipeView {
   #parentElement = document.querySelector('.recipe');
   #data;
+  #errorMessage = `We could not find that recipe.Please try another one!!`
 
   render(data) {
     this.#data = data;
@@ -28,6 +29,12 @@ class RecipeView {
     this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
+  addHandleRender(handler){
+    ['hashchange', 'load'].forEach(ev => {
+      window.addEventListener(ev, handler);
+    });
+  }
+
   generateMarkupIngredients(ing) {
     return `<li class="recipe__ingredient">
               <svg class="recipe__icon">
@@ -43,6 +50,20 @@ class RecipeView {
                 ${ing.description}
               </div>
             </li>`;
+  }
+
+  renderError(message = this.#errorMessage){
+    const markup = `<div class="error">
+            <div>
+              <svg>
+                <use href="${icons}#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>`;
+          console.log(message);
+          this.#clear();
+          this.#parentElement.insertAdjacentHTML('afterbegin', markup);
   }
 
   generateMarkup() {

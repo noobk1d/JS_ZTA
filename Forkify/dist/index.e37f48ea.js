@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"hycaY":[function(require,module,exports) {
+})({"MWpgg":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -611,15 +611,15 @@ const controlRecipe = async function() {
         (0, _recipeViewDefault.default).render(recipe);
     } catch (e) {
         console.log(e);
+        (0, _recipeViewDefault.default).renderError();
     }
 };
-[
-    "hashchange",
-    "load"
-].forEach((ev)=>{
-    window.addEventListener(ev, controlRecipe);
-}); // window.addEventListener('hashchange', showRecipes);
- // window.addEventListener('load', showRecipes);
+// window.addEventListener('hashchange', showRecipes);
+// window.addEventListener('load', showRecipes);
+const init = function() {
+    (0, _recipeViewDefault.default).addHandleRender(controlRecipe);
+};
+init();
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","./views/model":"9JH1c","./views/recipeView":"l60JC","url:../img/icons.svg":"loVOp"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
@@ -678,6 +678,7 @@ const loadRecipe = async function(id) {
         console.log(state.recipe);
     } catch (e) {
         console.log(e);
+        throw e;
     }
 };
 
@@ -712,7 +713,7 @@ const getJSON = async function(url) {
         const data = await res.json();
         return data;
     } catch (e) {
-        throw e;
+        throw new Error("404:Invalid ID");
     }
 };
 
@@ -727,6 +728,7 @@ console.log((0, _fractionalDefault.default));
 class RecipeView {
     #parentElement = document.querySelector(".recipe");
     #data;
+    #errorMessage = `We could not find that recipe.Please try another one!!`;
     render(data) {
         this.#data = data;
         const markup = this.generateMarkup();
@@ -746,6 +748,14 @@ class RecipeView {
         this.#clear();
         this.#parentElement.insertAdjacentHTML("afterbegin", markup);
     }
+    addHandleRender(handler) {
+        [
+            "hashchange",
+            "load"
+        ].forEach((ev)=>{
+            window.addEventListener(ev, handler);
+        });
+    }
     generateMarkupIngredients(ing) {
         return `<li class="recipe__ingredient">
               <svg class="recipe__icon">
@@ -757,6 +767,19 @@ class RecipeView {
                 ${ing.description}
               </div>
             </li>`;
+    }
+    renderError(message = this.#errorMessage) {
+        const markup = `<div class="error">
+            <div>
+              <svg>
+                <use href="${(0, _iconsSvgDefault.default)}#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>${message}</p>
+          </div>`;
+        console.log(message);
+        this.#clear();
+        this.#parentElement.insertAdjacentHTML("afterbegin", markup);
     }
     generateMarkup() {
         return ` <div class="recipe__fig">
@@ -1126,6 +1149,6 @@ Fraction.primeFactors = function(n) {
 };
 module.exports.Fraction = Fraction;
 
-},{}]},["hycaY","aenu9"], "aenu9", "parcelRequire3a11")
+},{}]},["MWpgg","aenu9"], "aenu9", "parcelRequire3a11")
 
 //# sourceMappingURL=index.e37f48ea.js.map

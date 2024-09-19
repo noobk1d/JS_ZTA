@@ -15,6 +15,6 @@ export const getJSON = async function (url) {
     const data = await res.json();
     return data;
   } catch (e) {
-    throw e;
+    throw new Error('404:Invalid ID');
   }
 };

@@ -32,11 +32,13 @@ const controlRecipe = async function () {
     recipeView.render(recipe);
   } catch (e) {
     console.log(e);
+    recipeView.renderError();
   }
 };
 
-['hashchange', 'load'].forEach(ev => {
-  window.addEventListener(ev, controlRecipe);
-});
 // window.addEventListener('hashchange', showRecipes);
 // window.addEventListener('load', showRecipes);
+const init = function(){
+  recipeView.addHandleRender(controlRecipe);
+}
+init();
