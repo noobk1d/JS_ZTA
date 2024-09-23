@@ -16,6 +16,15 @@ class RecipeView extends View{
     });
   }
 
+  addHandlerUpdateServing(handler){
+      this._parentElement.addEventListener('click',function(e){
+          const btn = e.target.closest('.btn--tiny'); 
+          if(!btn) return;
+          const updateTo = +btn.dataset.updateTo;
+          if(updateTo > 0) handler(updateTo);
+      });
+  }
+
   generateMarkupIngredients(ing) {
     return `<li class="recipe__ingredient">
               <svg class="recipe__icon">
@@ -74,12 +83,12 @@ class RecipeView extends View{
             <span class="recipe__info-text">servings</span>
 
             <div class="recipe__info-buttons">
-              <button class="btn--tiny btn--increase-servings">
+              <button class="btn--tiny btn--update-servings " data-update-to="${this._data.servings-1}">
                 <svg>
                   <use href="${icons}#icon-minus-circle"></use>
                 </svg>
               </button>
-              <button class="btn--tiny btn--increase-servings">
+              <button class="btn--tiny btn--update-servings "data-update-to="${this._data.servings+1}">
                 <svg>
                   <use href="${icons}#icon-plus-circle"></use>
                 </svg>
@@ -109,7 +118,7 @@ class RecipeView extends View{
         <div class="recipe__directions">
           <h2 class="heading--2">How to cook it</h2>
           <p class="recipe__directions-text">
-            This this._data was carefully designed and tested by
+            This recipe was carefully designed and tested by
             <span class="recipe__publisher">${
               this._data.publisher
             }</span>. Please check out

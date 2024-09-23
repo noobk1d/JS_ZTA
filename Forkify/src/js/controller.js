@@ -2,6 +2,7 @@ import * as model from './views/model';
 import recipeView from './views/recipeView';
 import searchView from './views/searchView';
 import recipeView from './views/recipeView';
+import paginationView from './views/paginationView';
 
 import icons from 'url:../img/icons.svg';
 import resultsView from './views/resultsView';
@@ -20,14 +21,16 @@ console.log('TEST');
 
 const controlRecipe = async function () {
   try {
+    console.log(1); 
     const id = window.location.hash.slice(1);
     console.log(id);
-
+    console.log(2);
     if (!id) return;
-    console.log(1);
     //Loader
     recipeView.renderSpinner(recipeContainer);
 
+    //0]
+    resultsView.update(model.getSearchResultsPage());
     //1 ] Loading the recipe
     await model.loadRecipe(id);
     const { recipe } = model.state;
@@ -35,6 +38,10 @@ const controlRecipe = async function () {
 
     //2]Rendering the recipe
     recipeView.render(recipe);
+
+    //Test:Servings
+   //controlServing(8);
+
   } catch (e) {
     console.log(e);
     recipeView.renderError();
@@ -49,17 +56,45 @@ const controlSearchResults = async function(){
       console.log(query);
       if(!query) return;
       await model.loadSearchResults(query);
-      console.log(model.state.search.results);
-      resultsView.render(model.state.search.results);
+      // console.log(model.state.search.results);
+      // resultsView.render(model.state.search.results);
+
+      //Render Results
+      resultsView.render(model.getSearchResultsPage());
+
+      //Render initial Pagination
+      paginationView.render(model.state.search);
+
   }catch(e){
     console.log(e);
   }
+}
+
+const controlPagination = function(gotoPage){
+    console.log('btn1');
+    //Render new results and pagination
+    resultsView.render(model.getSearchResultsPage(gotoPage));
+    paginationView.render(model.state.search);
+}
+
+const controlServing = function(newServings){
+  // console.log('check');
+  model.updateServings(newServings);
+
+  //Updating Recipe
+  // recipeView.render(model.state.recipe);
+  //Update Dom which has only changed,not the entire Dom
+  recipeView.update(model.state.recipe);
+
 }
 
 // window.addEventListener('hashchange', showRecipes);
 // window.addEventListener('load', showRecipes);
 const init = function(){
   recipeView.addHandleRender(controlRecipe);
+  recipeView.addHandlerUpdateServing(controlServing);
   searchView.addHandlerSearch(controlSearchResults);
+  paginationView.addHandlerClick(controlPagination);
+  // controlServing();
 }
 init();
