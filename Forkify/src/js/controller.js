@@ -3,6 +3,7 @@ import recipeView from './views/recipeView';
 import searchView from './views/searchView';
 import recipeView from './views/recipeView';
 import paginationView from './views/paginationView';
+import bookmarksView from './views/bookmarksView';
 
 import icons from 'url:../img/icons.svg';
 import resultsView from './views/resultsView';
@@ -10,7 +11,7 @@ console.log(icons);
 
 const recipeContainer = document.querySelector('.recipe');
 
-if(module.hot){
+if (module.hot) {
   module.hot.accept();
 }
 
@@ -21,7 +22,7 @@ console.log('TEST');
 
 const controlRecipe = async function () {
   try {
-    console.log(1); 
+    console.log(1);
     const id = window.location.hash.slice(1);
     console.log(id);
     console.log(2);
@@ -31,7 +32,9 @@ const controlRecipe = async function () {
 
     //0]
     resultsView.update(model.getSearchResultsPage());
-    //1 ] Loading the recipe
+    bookmarksView.update(model.state.bookmark);
+
+    //1 ] Loading the recipefalse;
     await model.loadRecipe(id);
     const { recipe } = model.state;
     console.log(model.state.recipe);
@@ -40,44 +43,42 @@ const controlRecipe = async function () {
     recipeView.render(recipe);
 
     //Test:Servings
-   //controlServing(8);
-
+    //controlServing(8);
   } catch (e) {
     console.log(e);
     recipeView.renderError();
   }
 };
 
-const controlSearchResults = async function(){
-  try{
-      resultsView.renderSpinner();
+const controlSearchResults = async function () {
+  try {
+    resultsView.renderSpinner();
 
-      const query = searchView.getQuery();  
-      console.log(query);
-      if(!query) return;
-      await model.loadSearchResults(query);
-      // console.log(model.state.search.results);
-      // resultsView.render(model.state.search.results);
+    const query = searchView.getQuery();
+    console.log(query);
+    if (!query) return;
+    await model.loadSearchResults(query);
+    // console.log(model.state.search.results);
+    // resultsView.render(model.state.search.results);
 
-      //Render Results
-      resultsView.render(model.getSearchResultsPage());
+    //Render Results
+    resultsView.render(model.getSearchResultsPage());
 
-      //Render initial Pagination
-      paginationView.render(model.state.search);
-
-  }catch(e){
+    //Render initial Pagination
+    paginationView.render(model.state.search);
+  } catch (e) {
     console.log(e);
   }
-}
+};
 
-const controlPagination = function(gotoPage){
-    console.log('btn1');
-    //Render new results and pagination
-    resultsView.render(model.getSearchResultsPage(gotoPage));
-    paginationView.render(model.state.search);
-}
+const controlPagination = function (gotoPage) {
+  console.log('btn1');
+  //Render new results and pagination
+  resultsView.render(model.getSearchResultsPage(gotoPage));
+  paginationView.render(model.state.search);
+};
 
-const controlServing = function(newServings){
+const controlServing = function (newServings) {
   // console.log('check');
   model.updateServings(newServings);
 
@@ -85,16 +86,31 @@ const controlServing = function(newServings){
   // recipeView.render(model.state.recipe);
   //Update Dom which has only changed,not the entire Dom
   recipeView.update(model.state.recipe);
+};
 
-}
+const controlBookMark = function () {
+  //Add/Delete Bookmarks
+  if (!model.state.recipe.bookmarked) {
+    model.addBookmark(model.state.recipe);
+  } else {
+    model.removeBookmark(model.state.recipe.id);
+  }
+
+  //Render Recipes
+  recipeView.update(model.state.recipe);
+
+  //Render Bookmarks
+  bookmarksView.render(model.state.bookmark);
+};
 
 // window.addEventListener('hashchange', showRecipes);
 // window.addEventListener('load', showRecipes);
-const init = function(){
+const init = function () {
   recipeView.addHandleRender(controlRecipe);
   recipeView.addHandlerUpdateServing(controlServing);
+  recipeView.addHandlerBookMark(controlBookMark);
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   // controlServing();
-}
+};
 init();
