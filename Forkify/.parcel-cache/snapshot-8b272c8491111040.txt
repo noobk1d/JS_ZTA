@@ -1,4 +1,4 @@
-4593
+4594
 41D:\Practice\JS\JS_ZTA\Forkify\.prettierrc133715652730741545 0
 74D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\regions\GD.js121436361000000000 0
 91D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\features\css-widows-orphans.js121436361000000000 0
@@ -15,7 +15,7 @@
 62D:\Practice\JS\JS_ZTA\Forkify\node_modules\dotenv\package.json133715653819321039 0
 69D:\Practice\JS\JS_ZTA\Forkify\node_modules\mdn-data\css\syntaxes.json121436361000000000 0
 73D:\Practice\JS\JS_ZTA\Forkify\node_modules\semver\internal\identifiers.js121436361000000000 0
-34D:\Practice\JS\JS_ZTA\Forkify\dist133715941735295785 1
+34D:\Practice\JS\JS_ZTA\Forkify\dist133717676785800047 1
 78D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\features\proxy.js121436361000000000 0
 83D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\features\selectlist.js121436361000000000 0
 72D:\Practice\JS\JS_ZTA\Forkify\node_modules\nullthrows\nullthrows.js.flow121436361000000000 0
@@ -27,7 +27,7 @@
 68D:\Practice\JS\JS_ZTA\Forkify\node_modules\ordered-binary\index.d.ts121436361000000000 0
 75D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc\helpers\_\_get\package.json121012626000000000 0
 83D:\Practice\JS\JS_ZTA\Forkify\node_modules\abortcontroller-polyfill\src\ponyfill.js121436361000000000 0
-59D:\Practice\JS\JS_ZTA\Forkify\src\js\views\bookmarksView.js133715935997358772 0
+59D:\Practice\JS\JS_ZTA\Forkify\src\js\views\bookmarksView.js133716794346667736 0
 72D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\packager-html\LICENSE121436361000000000 0
 77D:\Practice\JS\JS_ZTA\Forkify\node_modules\cosmiconfig\dist\readFile.d.ts.map121436361000000000 0
 58D:\Practice\JS\JS_ZTA\Forkify\forkify-flowchart-part-1.png133715652730993191 0
@@ -91,15 +91,6 @@
 66D:\Practice\JS\JS_ZTA\Forkify\node_modules\micromatch\package.json133715653816086859 0
 87D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\features\scrollintoview.js121436361000000000 0
 36D:\Practice\JS\JS_ZTA\Forkify\src\js133715652798417058 1
-90D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\features\css-focus-visible.js121436361000000000 0
-80D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\runtime-js\src\helpers\worker133715653710166804 1
-78D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\regions\alt-af.js121436361000000000 0
-52D:\Practice\JS\JS_ZTA\Forkify\node_modules\commander133715653819531067 1
-74D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\regions\AT.js121436361000000000 0
-88D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\runtime-js\src\helpers\cacheLoader.js121436361000000000 0
-93D:\Practice\JS\JS_ZTA\Forkify\node_modules\@babel\highlight\node_modules\color-name\README.md131339336430000000 0
-72D:\Practice\JS\JS_ZTA\Forkify\node_modules\svgo\plugins\removeViewBox.js121436361000000000 0
-81D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc\helpers\cjs\_get_prototype_of.cjs121012626000000000 0
 38D:\Practice\JS\JS_ZTA\Forkify\src\sass133715652798506938 1
 92D:\Practice\JS\JS_ZTA\Forkify\node_modules\dom-serializer\node_modules\entities\lib\index.js121436361000000000 0
 60D:\Practice\JS\JS_ZTA\Forkify\node_modules\sass\types\legacy133715653728024774 1
@@ -161,14 +152,15 @@
 66D:\Practice\JS\JS_ZTA\Forkify\node_modules\json5\dist\index.min.js121436361000000000 0
 117D:\Practice\JS\JS_ZTA\Forkify\node_modules\msgpackr-extract\node_modules\node-gyp-build-optional-packages\optional.js121436361000000000 0
 77D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\core\src\InternalConfig.js121436361000000000 0
-50D:\Practice\JS\JS_ZTA\Forkify\src\js\controller.js133715923165173563 0
+50D:\Practice\JS\JS_ZTA\Forkify\src\js\controller.js133717667151278430 0
 97D:\Practice\JS\JS_ZTA\Forkify\node_modules\@babel\highlight\node_modules\ansi-styles\package.json133715653813896386 0
 51D:\Practice\JS\JS_ZTA\Forkify\node_modules\msgpackr133715653818430642 1
 75D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc\helpers\src\_instanceof.mjs121012626000000000 0
-42D:\Practice\JS\JS_ZTA\Forkify\src\js\views133715924377762259 1
+42D:\Practice\JS\JS_ZTA\Forkify\src\js\views133717434100197936 1
 70D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc\helpers\_\_ts_metadata133715653743038994 1
 78D:\Practice\JS\JS_ZTA\Forkify\node_modules\postcss-value-parser\lib\index.d.ts121436361000000000 0
 75D:\Practice\JS\JS_ZTA\Forkify\node_modules\abortcontroller-polyfill\LICENSE121436361000000000 0
+59D:\Practice\JS\JS_ZTA\Forkify\src\js\views\addRecipeView.js133717646659461818 0
 64D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\rust\index.js121436361000000000 0
 52D:\Practice\JS\JS_ZTA\Forkify\src\js\views\config.js133715652798426933 0
 67D:\Practice\JS\JS_ZTA\Forkify\node_modules\svgo\lib\svgo\plugins.js121436361000000000 0
@@ -180,7 +172,7 @@
 79D:\Practice\JS\JS_ZTA\Forkify\node_modules\htmlnano\docs\docs\060-contribute.md121436361000000000 0
 52D:\Practice\JS\JS_ZTA\Forkify\src\js\views\helper.js133715652798426933 0
 98D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc\helpers\src\_class_check_private_static_access.mjs121012626000000000 0
-51D:\Practice\JS\JS_ZTA\Forkify\src\js\views\model.js133715913999083323 0
+51D:\Practice\JS\JS_ZTA\Forkify\src\js\views\model.js133717676785174521 0
 86D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\workers\src\threads\ThreadsChild.js121436361000000000 0
 94D:\Practice\JS\JS_ZTA\Forkify\node_modules\htmlnano\lib\modules\deduplicateAttributeValues.mjs121436361000000000 0
 71D:\Practice\JS\JS_ZTA\Forkify\node_modules\weak-lru-cache\tests\test.js121436361000000000 0
@@ -202,7 +194,7 @@
 95D:\Practice\JS\JS_ZTA\Forkify\node_modules\react-refresh\cjs\react-refresh-babel.development.js121436361000000000 0
 74D:\Practice\JS\JS_ZTA\Forkify\node_modules\posthtml-render\dist\index.d.ts121436361000000000 0
 57D:\Practice\JS\JS_ZTA\Forkify\node_modules\domhandler\lib133715653720649463 1
-57D:\Practice\JS\JS_ZTA\Forkify\src\js\views\resultsView.js133715702788828183 0
+57D:\Practice\JS\JS_ZTA\Forkify\src\js\views\resultsView.js133716777238319853 0
 63D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc\core\spack.d.ts121012626000000000 0
 74D:\Practice\JS\JS_ZTA\Forkify\node_modules\lmdb\util\set-optional-deps.cjs121436361000000000 0
 64D:\Practice\JS\JS_ZTA\Forkify\node_modules\boolbase\package.json133715653819491066 0
@@ -240,7 +232,7 @@
 95D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\core\test\fixtures\library-custom-scopehoist133715653747620024 1
 73D:\Practice\JS\JS_ZTA\Forkify\node_modules\svgo\plugins\removeMetadata.js121436361000000000 0
 50D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel133715653833091208 1
-53D:\Practice\JS\JS_ZTA\Forkify\dist\icons.21bad73c.svg133715941734665633 0
+53D:\Practice\JS\JS_ZTA\Forkify\dist\icons.21bad73c.svg133717676383717186 0
 74D:\Practice\JS\JS_ZTA\Forkify\node_modules\css-tree\lib\syntax\node\CDO.js121436361000000000 0
 64D:\Practice\JS\JS_ZTA\Forkify\node_modules\csso\lib\clean\Raw.js121436361000000000 0
 47D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc133715653833101208 1
@@ -289,6 +281,15 @@
 60D:\Practice\JS\JS_ZTA\Forkify\node_modules\parcel\src\bin.js121436361000000000 0
 48D:\Practice\JS\JS_ZTA\Forkify\node_modules\chalk133715653816446958 1
 51D:\Practice\JS\JS_ZTA\Forkify\node_modules\chokidar133715653816426929 1
+90D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\features\css-focus-visible.js121436361000000000 0
+80D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\runtime-js\src\helpers\worker133715653710166804 1
+78D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\regions\alt-af.js121436361000000000 0
+52D:\Practice\JS\JS_ZTA\Forkify\node_modules\commander133715653819531067 1
+74D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\regions\AT.js121436361000000000 0
+88D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\runtime-js\src\helpers\cacheLoader.js121436361000000000 0
+93D:\Practice\JS\JS_ZTA\Forkify\node_modules\@babel\highlight\node_modules\color-name\README.md131339336430000000 0
+72D:\Practice\JS\JS_ZTA\Forkify\node_modules\svgo\plugins\removeViewBox.js121436361000000000 0
+81D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc\helpers\cjs\_get_prototype_of.cjs121012626000000000 0
 66D:\Practice\JS\JS_ZTA\Forkify\node_modules\color-name\package.json133715653819461096 0
 95D:\Practice\JS\JS_ZTA\Forkify\node_modules\@babel\highlight\node_modules\supports-color\license131408182550000000 0
 54D:\Practice\JS\JS_ZTA\Forkify\node_modules\cosmiconfig133715653817087257 1
@@ -1775,7 +1776,6 @@
 69D:\Practice\JS\JS_ZTA\Forkify\node_modules\mdn-data\css\at-rules.json121436361000000000 0
 76D:\Practice\JS\JS_ZTA\Forkify\node_modules\mdn-data\css\at-rules.schema.json121436361000000000 0
 80D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\runtime-js\lib\helpers\worker133715653709486769 1
-64D:\Practice\JS\JS_ZTA\Forkify\node_modules\json5\lib\register.js121436361000000000 0
 68D:\Practice\JS\JS_ZTA\Forkify\node_modules\css-tree\lib\syntax\scope133715653738878024 1
 64D:\Practice\JS\JS_ZTA\Forkify\node_modules\mdn-data\css\index.js121436361000000000 0
 70D:\Practice\JS\JS_ZTA\Forkify\node_modules\mdn-data\css\selectors.json121436361000000000 0
@@ -2025,6 +2025,7 @@
 89D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\features\domcontentloaded.js121436361000000000 0
 65D:\Practice\JS\JS_ZTA\Forkify\node_modules\color-convert\index.js121436361000000000 0
 63D:\Practice\JS\JS_ZTA\Forkify\node_modules\json5\lib\parse.d.ts121436361000000000 0
+64D:\Practice\JS\JS_ZTA\Forkify\node_modules\json5\lib\register.js121436361000000000 0
 63D:\Practice\JS\JS_ZTA\Forkify\node_modules\json5\lib\require.js121436361000000000 0
 77D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\events\src\ValueEmitter.js121436361000000000 0
 80D:\Practice\JS\JS_ZTA\Forkify\node_modules\css-tree\lib\syntax\scope\selector.js121436361000000000 0
@@ -2153,7 +2154,7 @@
 84D:\Practice\JS\JS_ZTA\Forkify\node_modules\@swc\helpers\cjs\_object_spread_props.cjs121012626000000000 0
 72D:\Practice\JS\JS_ZTA\Forkify\node_modules\immutable\dist\immutable.d.ts121436361000000000 0
 79D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\transformer-svg\node_modules133715653810570071 1
-45D:\Practice\JS\JS_ZTA\Forkify\dist\index.html133715941734885702 0
+45D:\Practice\JS\JS_ZTA\Forkify\dist\index.html133717676386183289 0
 84D:\Practice\JS\JS_ZTA\Forkify\node_modules\caniuse-lite\data\features\css-nesting.js121436361000000000 0
 70D:\Practice\JS\JS_ZTA\Forkify\node_modules\immutable\dist\immutable.js121436361000000000 0
 75D:\Practice\JS\JS_ZTA\Forkify\node_modules\immutable\dist\immutable.js.flow121436361000000000 0
@@ -3990,7 +3991,7 @@
 76D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\workers\lib\WorkerFarm.js121436361000000000 0
 87D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\workers\lib\threads\ThreadsWorker.js121436361000000000 0
 86D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\workers\lib\process\ProcessChild.js121436361000000000 0
-52D:\Practice\JS\JS_ZTA\Forkify\dist\index.e37f48ea.js133715941733945484 0
+52D:\Practice\JS\JS_ZTA\Forkify\dist\index.e37f48ea.js133717676785740010 0
 81D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\watcher-win32-x64\package.json133715653813806343 0
 78D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\watcher-win32-x64\README.md121436361000000000 0
 70D:\Practice\JS\JS_ZTA\Forkify\node_modules\@parcel\optimizer-image\lib133715653692876433 1
@@ -4586,9 +4587,9 @@
 58D:\Practice\JS\JS_ZTA\Forkify\node_modules\.bin\semver.ps1133715653820931568 0
 56D:\Practice\JS\JS_ZTA\Forkify\node_modules\.bin\svgo.ps1133715653821021764 0
 74D:\Practice\JS\JS_ZTA\Forkify\node_modules\.bin\update-browserslist-db.cmd133715653821171636 0
-55D:\Practice\JS\JS_ZTA\Forkify\dist\favicon.8b2f57bf.png133715941733765479 0
-56D:\Practice\JS\JS_ZTA\Forkify\dist\index.e37f48ea.js.map133715941734045557 0
-52D:\Practice\JS\JS_ZTA\Forkify\dist\logo.726d37a8.png133715941734675646 0
-53D:\Practice\JS\JS_ZTA\Forkify\dist\index.f7626f62.css133715941734985768 0
-57D:\Practice\JS\JS_ZTA\Forkify\dist\index.f7626f62.css.map133715941735025777 0
-53D:\Practice\JS\JS_ZTA\Forkify\dist\icons.dfd7a6db.svg133715941735275754 0
+55D:\Practice\JS\JS_ZTA\Forkify\dist\favicon.8b2f57bf.png133717665757202103 0
+52D:\Practice\JS\JS_ZTA\Forkify\dist\logo.726d37a8.png133717676381071151 0
+53D:\Practice\JS\JS_ZTA\Forkify\dist\index.f7626f62.css133717676383477087 0
+57D:\Practice\JS\JS_ZTA\Forkify\dist\index.f7626f62.css.map133717676383577191 0
+53D:\Practice\JS\JS_ZTA\Forkify\dist\icons.dfd7a6db.svg133717676384873069 0
+56D:\Practice\JS\JS_ZTA\Forkify\dist\index.e37f48ea.js.map133717676785780033 0
