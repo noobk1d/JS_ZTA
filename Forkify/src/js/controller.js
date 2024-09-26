@@ -5,6 +5,7 @@ import recipeView from './views/recipeView';
 import paginationView from './views/paginationView';
 import bookmarksView from './views/bookmarksView';
 import addRecipeView from './views/addRecipeView';
+import { MODAL_CLOSE_SEC } from './views/config';
 
 import icons from 'url:../img/icons.svg';
 import resultsView from './views/resultsView';
@@ -109,10 +110,23 @@ const controlRenderBookmark = function () {
 };
 
 //Upload New Recipe
-const controlAddRecipe = function (newRecipe) {
+const controlAddRecipe = async function (newRecipe) {
   console.log(newRecipe);
-
-  model.uploadRecipes(newRecipe);
+  try {
+    await model.uploadRecipes(newRecipe);
+    // console.log(model.state.recipe);
+    recipeView.render(model.state.recipe);
+    //Success Message
+    addRecipeView.renderMessage();
+    //Close the form
+    setTimeout(function () {
+      addRecipeView.toggleWindow();
+    }, MODAL_CLOSE_SEC * 1000);
+  } catch (e) {
+    console.error('💣', e);
+    //Render error message
+    addRecipeView.renderError(e.message);
+  }
 };
 
 // window.addEventListener('hashchange', showRecipes);
